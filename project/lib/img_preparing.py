@@ -1,3 +1,11 @@
+"""
+Title           :img_preparing.py
+Description     :This script divides the training images into 2 sets and stores them in lmdb databases for training and validation.
+Author          :Adil Moujahid
+version         :0.2
+python_version  :2.7.11
+"""
+
 import os
 import glob
 import random
@@ -14,16 +22,6 @@ class ImgPreparing(object):
     # Size of images
     IMAGE_WIDTH = 227
     IMAGE_HEIGHT = 227
-
-    def __init__(self, param):
-        # self.train_lmdb = param.train_lmdb
-        # self.validation_lmdb = param.train_lmdb
-        # self.train_data = [img for img in glob.glob(param.train)]
-        # self.test_data = [img for img in glob.glob(param.test)]
-
-    # def prepare_path(self):
-    #     os.system('rm -rf  ' + self.train_lmdb)
-    #     os.system('rm -rf  ' + self.validation_lmdb)
 
     def transform_img(self, img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT):
         # Histogram Equalization
